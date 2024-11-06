@@ -21,14 +21,12 @@
         Welcome to my page. Here, you can download my <strong>Haskell Dynamic Programming</strong> handout.
       </p>
 
-      <!-- Download Button and Counter -->
+      <!-- Download Button -->
       <div class="mt-8 flex flex-col items-center">
-        <a href="handout.pdf" download="Dynamic_Programming_Haskell_Handout.pdf"
-           onclick="incrementDownloadCount()"
+        <a href="handout.pdf" download="Haskell_Dynamic_Programming_Handout.pdf"
            class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
           📥 Download Handout
         </a>
-        <p id="download-count" class="mt-2 text-gray-500 text-sm">Downloads: 0</p>
       </div>
 
       <!-- Newsletter Link -->
@@ -45,20 +43,6 @@
       </footer>
     </div>
   </div>
-
-  <!-- JavaScript for Persistent Download Counter -->
-  <script>
-    // Load download count from localStorage, or set it to 0 if not found
-    let downloadCount = localStorage.getItem("downloadCount") || 0;
-    document.getElementById("download-count").innerText = `Downloads: ${downloadCount}`;
-
-    // Function to increment download count and store it persistently
-    function incrementDownloadCount() {
-      downloadCount++;
-      document.getElementById("download-count").innerText = `Downloads: ${downloadCount}`;
-      localStorage.setItem("downloadCount", downloadCount);
-    }
-  </script>
 
 </body>
 </html>
