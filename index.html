@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arjun Maneesh Agarwal</title>
+  <title>Arjun Maneesh Agarwal - Dynamic Programming Handout</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
@@ -14,16 +14,16 @@
 
       <!-- Header -->
       <h1 class="text-3xl font-semibold text-center text-blue-700">Arjun Maneesh Agarwal</h1>
-      <p class="text-center text-gray-600 mt-1">BSc I, CMI</p>
+      <p class="text-center text-gray-600 mt-1">BSc I Mathematics Student, CMI</p>
 
       <!-- Description -->
       <p class="text-gray-700 mt-6 text-center">
-        Welcome to my page. Here, you can download my <strong>Haskell Dynamic Programming</strong> handout. 
+        Welcome to my page. Here, you can download my <strong>Haskell Dynamic Programming</strong> handout.
       </p>
 
       <!-- Download Button and Counter -->
       <div class="mt-8 flex flex-col items-center">
-        <a href="handout.pdf" download="Dynamic_Programming_Handout_Arjun_Agarwal.pdf"
+        <a href="handout.pdf" download="Dynamic_Programming_Haskell_Handout.pdf"
            onclick="incrementDownloadCount()"
            class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
           📥 Download Handout
@@ -46,15 +46,17 @@
     </div>
   </div>
 
-  <!-- JavaScript for Download Counter -->
+  <!-- JavaScript for Persistent Download Counter -->
   <script>
-    // Initialize download count
-    let downloadCount = 0;
+    // Load download count from localStorage, or set it to 0 if not found
+    let downloadCount = localStorage.getItem("downloadCount") || 0;
+    document.getElementById("download-count").innerText = `Downloads: ${downloadCount}`;
 
-    // Function to increment download count
+    // Function to increment download count and store it persistently
     function incrementDownloadCount() {
       downloadCount++;
       document.getElementById("download-count").innerText = `Downloads: ${downloadCount}`;
+      localStorage.setItem("downloadCount", downloadCount);
     }
   </script>
 
